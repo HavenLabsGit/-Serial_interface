@@ -1,0 +1,864 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18877 ]
+[d frameptr 6 ]
+"73 /home/ryan/Nextcloud/Programming/PIC16F18877/libs/eeprom.c
+[v _byte_write byte_write `(v  1 e 1 0 ]
+"95
+[v _page_write page_write `(v  1 e 1 0 ]
+"140
+[v _random_read random_read `(uc  1 e 1 0 ]
+"157
+[v _sequential_read sequential_read `(v  1 e 1 0 ]
+"19 /home/ryan/Nextcloud/Programming/PIC16F18877/libs/i2c_drivers.c
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+"41
+[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
+"56
+[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
+"87
+[v _I2C_Write I2C_Write `(v  1 e 1 0 ]
+"106
+[v _I2C_NotAck_Read I2C_NotAck_Read `(v  1 e 1 0 ]
+"129
+[v _I2C_Ack_Read I2C_Ack_Read `(v  1 e 1 0 ]
+"156
+[v _I2C_Idle_Check I2C_Idle_Check `(v  1 s 1 I2C_Idle_Check ]
+"4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/atoi.c
+[v _atoi atoi `(i  1 e 2 0 ]
+"72 /opt/microchip/xc8/v2.31/pic/sources/c99/common/doprnt.c
+[v _pad pad `(i  1 s 2 pad ]
+"645
+[v _xtoa xtoa `(i  1 s 2 xtoa ]
+"692
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+"1390
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/isalpha.c
+[v _isalpha isalpha `(i  1 e 2 0 ]
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/isdigit.c
+[v _isdigit isdigit `(i  1 e 2 0 ]
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/islower.c
+[v _islower islower `(i  1 e 2 0 ]
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/isspace.c
+[v _isspace isspace `(i  1 e 2 0 ]
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/isupper.c
+[v _isupper isupper `(i  1 e 2 0 ]
+"8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/printf.c
+[v _printf printf `(i  1 e 2 0 ]
+"10 /opt/microchip/xc8/v2.31/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/toupper.c
+[v _toupper toupper `(i  1 e 2 0 ]
+"15 /opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v2.31/pic/sources/c99/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"66 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"113
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"132
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"141
+[v _getch getch `(uc  1 e 1 0 ]
+"146
+[v _putch putch `(v  1 e 1 0 ]
+"153
+[v _EUSART_DefaultFramingErrorHandler EUSART_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"155
+[v _EUSART_DefaultOverrunErrorHandler EUSART_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"163
+[v _EUSART_DefaultErrorHandler EUSART_DefaultErrorHandler `(v  1 e 1 0 ]
+"166
+[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
+"170
+[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"174
+[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+"80 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/main.c
+[v _get_hex get_hex `(uc  1 e 1 0 ]
+"143
+[v _create_hex create_hex `(uc  1 e 1 0 ]
+"194
+[v _main main `(v  1 e 1 0 ]
+"50 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"58
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"72
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+"55 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"677 /opt/microchip/mplabx/v5.45/packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8/pic/include/proc/pic16f18877.h
+[v _TRISA TRISA `VEuc  1 e 1 @17 ]
+"739
+[v _TRISB TRISB `VEuc  1 e 1 @18 ]
+"801
+[v _TRISC TRISC `VEuc  1 e 1 @19 ]
+"863
+[v _TRISD TRISD `VEuc  1 e 1 @20 ]
+"925
+[v _TRISE TRISE `VEuc  1 e 1 @21 ]
+"957
+[v _LATA LATA `VEuc  1 e 1 @22 ]
+"1019
+[v _LATB LATB `VEuc  1 e 1 @23 ]
+"1081
+[v _LATC LATC `VEuc  1 e 1 @24 ]
+"1143
+[v _LATD LATD `VEuc  1 e 1 @25 ]
+"1205
+[v _LATE LATE `VEuc  1 e 1 @26 ]
+"3765
+[v _RC1REG RC1REG `VEuc  1 e 1 @281 ]
+"3819
+[v _TX1REG TX1REG `VEuc  1 e 1 @282 ]
+"3880
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @283 ]
+"3950
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
+"4004
+[v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
+[s S545 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"4030
+[u S554 . 1 `S545 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES554  1 e 1 @285 ]
+"4184
+[v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
+[s S524 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"4210
+[u S533 . 1 `S524 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES533  1 e 1 @286 ]
+"4364
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
+"4610
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @396 ]
+"4630
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @397 ]
+"4820
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
+[s S86 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"4929
+[s S95 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S100 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S105 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S110 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[s S115 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DAT 1 0 :1:5 
+]
+[s S121 . 1 `uc 1 BF1 1 0 :1:0 
+`uc 1 UA1 1 0 :1:1 
+`uc 1 R 1 0 :1:2 
+`uc 1 START 1 0 :1:3 
+`uc 1 STOP 1 0 :1:4 
+`uc 1 D 1 0 :1:5 
+`uc 1 CKE1 1 0 :1:6 
+`uc 1 SMP1 1 0 :1:7 
+]
+[s S130 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+`uc 1 START1 1 0 :1:3 
+`uc 1 STOP1 1 0 :1:4 
+`uc 1 DA 1 0 :1:5 
+]
+[s S136 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW1 1 0 :1:2 
+`uc 1 I2C_START1 1 0 :1:3 
+`uc 1 I2C_STOP2 1 0 :1:4 
+`uc 1 DA1 1 0 :1:5 
+]
+[s S142 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ1 1 0 :1:2 
+`uc 1 S2 1 0 :1:3 
+`uc 1 P2 1 0 :1:4 
+`uc 1 DATA_ADDRESS1 1 0 :1:5 
+]
+[s S148 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A1 1 0 :1:5 
+]
+[s S153 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_nA1 1 0 :1:5 
+]
+[s S158 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_nW1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 I2C_DAT1 1 0 :1:5 
+]
+[s S163 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA2 1 0 :1:5 
+]
+[s S168 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS1 1 0 :1:5 
+]
+[u S173 . 1 `S86 1 . 1 0 `S95 1 . 1 0 `S100 1 . 1 0 `S105 1 . 1 0 `S110 1 . 1 0 `S115 1 . 1 0 `S121 1 . 1 0 `S130 1 . 1 0 `S136 1 . 1 0 `S142 1 . 1 0 `S148 1 . 1 0 `S153 1 . 1 0 `S158 1 . 1 0 `S163 1 . 1 0 `S168 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES173  1 e 1 @399 ]
+[s S278 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"5214
+[s S284 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[s S289 . 1 `uc 1 SSPM01 1 0 :1:0 
+`uc 1 SSPM11 1 0 :1:1 
+`uc 1 SSPM21 1 0 :1:2 
+`uc 1 SSPM31 1 0 :1:3 
+`uc 1 CKP1 1 0 :1:4 
+`uc 1 SSPEN1 1 0 :1:5 
+`uc 1 SSPOV1 1 0 :1:6 
+`uc 1 WCOL1 1 0 :1:7 
+]
+[u S298 . 1 `S278 1 . 1 0 `S284 1 . 1 0 `S289 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES298  1 e 1 @400 ]
+"5304
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
+[s S331 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"5351
+[s S340 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADMSK 1 0 :5:1 
+]
+[s S343 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADMSK1 1 0 :1:1 
+`uc 1 ADMSK2 1 0 :1:2 
+`uc 1 ADMSK3 1 0 :1:3 
+`uc 1 ADMSK4 1 0 :1:4 
+`uc 1 ADMSK5 1 0 :1:5 
+]
+[s S350 . 1 `uc 1 SEN1 1 0 :1:0 
+`uc 1 ADMSK11 1 0 :1:1 
+`uc 1 ADMSK21 1 0 :1:2 
+`uc 1 ADMSK31 1 0 :1:3 
+`uc 1 ACKEN1 1 0 :1:4 
+`uc 1 ACKDT1 1 0 :1:5 
+`uc 1 ACKSTAT1 1 0 :1:6 
+`uc 1 GCEN1 1 0 :1:7 
+]
+[s S359 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RSEN1 1 0 :1:1 
+`uc 1 PEN1 1 0 :1:2 
+`uc 1 RCEN1 1 0 :1:3 
+`uc 1 ADMSK41 1 0 :1:4 
+`uc 1 ADMSK51 1 0 :1:5 
+]
+[u S366 . 1 `S331 1 . 1 0 `S340 1 . 1 0 `S343 1 . 1 0 `S350 1 . 1 0 `S359 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES366  1 e 1 @401 ]
+[s S411 . 1 `uc 1 SSP1IF 1 0 :1:0 
+`uc 1 BCL1IF 1 0 :1:1 
+`uc 1 SSP2IF 1 0 :1:2 
+`uc 1 BCL2IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+"21427
+[u S418 . 1 `S411 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES418  1 e 1 @1807 ]
+"22151
+[v _PMD0 PMD0 `VEuc  1 e 1 @1942 ]
+"22208
+[v _PMD1 PMD1 `VEuc  1 e 1 @1943 ]
+"22279
+[v _PMD2 PMD2 `VEuc  1 e 1 @1944 ]
+"22324
+[v _PMD3 PMD3 `VEuc  1 e 1 @1945 ]
+"22380
+[v _PMD4 PMD4 `VEuc  1 e 1 @1946 ]
+"22431
+[v _PMD5 PMD5 `VEuc  1 e 1 @1947 ]
+"23488
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"23628
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"23725
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"23776
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"23834
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"31373
+[v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @7877 ]
+"31425
+[v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @7878 ]
+"31529
+[v _SSP2CLKPPS SSP2CLKPPS `VEuc  1 e 1 @7880 ]
+"31581
+[v _SSP2DATPPS SSP2DATPPS `VEuc  1 e 1 @7881 ]
+"31685
+[v _RXPPS RXPPS `VEuc  1 e 1 @7883 ]
+"32239
+[v _RB1PPS RB1PPS `VEuc  1 e 1 @7961 ]
+"32289
+[v _RB2PPS RB2PPS `VEuc  1 e 1 @7962 ]
+"32739
+[v _RC3PPS RC3PPS `VEuc  1 e 1 @7971 ]
+"32789
+[v _RC4PPS RC4PPS `VEuc  1 e 1 @7972 ]
+"32889
+[v _RC6PPS RC6PPS `VEuc  1 e 1 @7974 ]
+"33539
+[v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
+"33601
+[v _WPUA WPUA `VEuc  1 e 1 @7993 ]
+"33663
+[v _ODCONA ODCONA `VEuc  1 e 1 @7994 ]
+"33725
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
+"33787
+[v _INLVLA INLVLA `VEuc  1 e 1 @7996 ]
+"34159
+[v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
+"34221
+[v _WPUB WPUB `VEuc  1 e 1 @8004 ]
+"34283
+[v _ODCONB ODCONB `VEuc  1 e 1 @8005 ]
+"34345
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @8006 ]
+"34407
+[v _INLVLB INLVLB `VEuc  1 e 1 @8007 ]
+"34779
+[v _ANSELC ANSELC `VEuc  1 e 1 @8014 ]
+"34841
+[v _WPUC WPUC `VEuc  1 e 1 @8015 ]
+"34903
+[v _ODCONC ODCONC `VEuc  1 e 1 @8016 ]
+"34965
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @8017 ]
+"35027
+[v _INLVLC INLVLC `VEuc  1 e 1 @8018 ]
+"35399
+[v _ANSELD ANSELD `VEuc  1 e 1 @8025 ]
+"35461
+[v _WPUD WPUD `VEuc  1 e 1 @8026 ]
+"35523
+[v _ODCOND ODCOND `VEuc  1 e 1 @8027 ]
+"35585
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @8028 ]
+"35647
+[v _INLVLD INLVLD `VEuc  1 e 1 @8029 ]
+"35833
+[v _ANSELE ANSELE `VEuc  1 e 1 @8036 ]
+"35865
+[v _WPUE WPUE `VEuc  1 e 1 @8037 ]
+"35903
+[v _ODCONE ODCONE `VEuc  1 e 1 @8038 ]
+"35935
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @8039 ]
+"35967
+[v _INLVLE INLVLE `VEuc  1 e 1 @8040 ]
+"37183
+"37183
+[v _ANSC3 ANSC3 `VEb  1 e 0 @64115 ]
+"37186
+[v _ANSC4 ANSC4 `VEb  1 e 0 @64116 ]
+"55 /opt/microchip/xc8/v2.31/pic/sources/c99/common/doprnt.c
+[v _flags flags `i  1 s 2 flags ]
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"66
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+"69
+[v _nout nout `i  1 s 2 nout ]
+[s S468 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"52 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/eusart.c
+[u S473 . 1 `S468 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusartRxLastError eusartRxLastError `VES473  1 e 1 0 ]
+"58
+[v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"59
+[v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"60
+[v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
+"60 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/main.c
+[v _data data `uc  1 e 1 0 ]
+"61
+[v _addr1 addr1 `uc  1 e 1 0 ]
+"62
+[v _addr2 addr2 `uc  1 e 1 0 ]
+"63
+[v _rx_data rx_data `uc  1 e 1 0 ]
+[v _hex hex `uc  1 e 1 0 ]
+[v _hex2 hex2 `uc  1 e 1 0 ]
+[v _count count `uc  1 e 1 0 ]
+"64
+[v _test test `[10]uc  1 e 10 0 ]
+"65
+[v _test2 test2 `[10]uc  1 e 10 0 ]
+"66
+[v _letter letter `uc  1 e 1 0 ]
+[v _str str `[3]uc  1 e 3 0 ]
+"67
+[v _count2 count2 `i  1 e 2 0 ]
+"194
+[v _main main `(v  1 e 1 0 ]
+{
+"301
+[v main@i_759 i `i  1 a 2 43 ]
+"296
+[v main@i_758 i `i  1 a 2 51 ]
+"290
+[v main@i_757 i `i  1 a 2 41 ]
+"280
+[v main@i_755 i `i  1 a 2 39 ]
+"274
+[v main@i_754 i `i  1 a 2 49 ]
+"268
+[v main@i_753 i `i  1 a 2 37 ]
+"263
+[v main@i_752 i `i  1 a 2 35 ]
+"251
+[v main@i_750 i `i  1 a 2 33 ]
+"246
+[v main@i_749 i `i  1 a 2 47 ]
+"241
+[v main@i_748 i `i  1 a 2 31 ]
+"234
+[v main@i_747 i `i  1 a 2 29 ]
+"222
+[v main@i_744 i `i  1 a 2 27 ]
+"217
+[v main@i_742 i `i  1 a 2 45 ]
+"211
+[v main@i i `i  1 a 2 25 ]
+"312
+} 0
+"157 /home/ryan/Nextcloud/Programming/PIC16F18877/libs/eeprom.c
+[v _sequential_read sequential_read `(v  1 e 1 0 ]
+{
+[v sequential_read@addr1 addr1 `uc  1 a 1 wreg ]
+"170
+[v sequential_read@b b `uc  1 a 1 19 ]
+"168
+[v sequential_read@a a `uc  1 a 1 17 ]
+"157
+[v sequential_read@addr1 addr1 `uc  1 a 1 wreg ]
+[v sequential_read@addr2 addr2 `uc  1 p 1 8 ]
+[v sequential_read@loops loops `i  1 p 2 9 ]
+"160
+[v sequential_read@addr1 addr1 `uc  1 a 1 18 ]
+"187
+} 0
+"129 /home/ryan/Nextcloud/Programming/PIC16F18877/libs/i2c_drivers.c
+[v _I2C_Ack_Read I2C_Ack_Read `(v  1 e 1 0 ]
+{
+[v I2C_Ack_Read@rx_data rx_data `*.4uc  1 a 1 wreg ]
+[v I2C_Ack_Read@rx_data rx_data `*.4uc  1 a 1 wreg ]
+[v I2C_Ack_Read@count count `uc  1 p 1 0 ]
+"132
+[v I2C_Ack_Read@rx_data rx_data `*.4uc  1 a 1 2 ]
+"142
+} 0
+"140 /home/ryan/Nextcloud/Programming/PIC16F18877/libs/eeprom.c
+[v _random_read random_read `(uc  1 e 1 0 ]
+{
+[v random_read@addr1 addr1 `uc  1 a 1 wreg ]
+[v random_read@addr1 addr1 `uc  1 a 1 wreg ]
+[v random_read@addr2 addr2 `uc  1 p 1 2 ]
+"143
+[v random_read@addr1 addr1 `uc  1 a 1 3 ]
+"155
+} 0
+"106 /home/ryan/Nextcloud/Programming/PIC16F18877/libs/i2c_drivers.c
+[v _I2C_NotAck_Read I2C_NotAck_Read `(v  1 e 1 0 ]
+{
+[v I2C_NotAck_Read@rx_data rx_data `*.4uc  1 a 1 wreg ]
+[v I2C_NotAck_Read@rx_data rx_data `*.4uc  1 a 1 wreg ]
+"109
+[v I2C_NotAck_Read@rx_data rx_data `*.4uc  1 a 1 1 ]
+"118
+} 0
+"95 /home/ryan/Nextcloud/Programming/PIC16F18877/libs/eeprom.c
+[v _page_write page_write `(v  1 e 1 0 ]
+{
+[v page_write@addr1 addr1 `uc  1 a 1 wreg ]
+"107
+[v page_write@b b `i  1 a 2 20 ]
+"105
+[v page_write@a a `i  1 a 2 18 ]
+"95
+[v page_write@addr1 addr1 `uc  1 a 1 wreg ]
+[v page_write@addr2 addr2 `uc  1 p 1 8 ]
+[v page_write@data data `uc  1 p 1 9 ]
+[v page_write@count count `i  1 p 2 10 ]
+"97
+[v page_write@addr1 addr1 `uc  1 a 1 22 ]
+"126
+} 0
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"8
+[v printf@ap ap `[1]*.4v  1 a 1 79 ]
+"5
+[v printf@fmt fmt `*.25DCuc  1 p 2 0 ]
+"13
+} 0
+"1390 /opt/microchip/xc8/v2.31/pic/sources/c99/common/doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+[s S1260 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.1S1260  1 a 1 wreg ]
+"1393
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 74 ]
+"1390
+[v vfprintf@fp fp `*.1S1260  1 a 1 wreg ]
+[v vfprintf@fmt fmt `*.25DCuc  1 p 2 68 ]
+[v vfprintf@ap ap `*.4*.4v  1 p 1 70 ]
+"1395
+"1390
+[v vfprintf@fp fp `*.1S1260  1 a 1 73 ]
+"1404
+} 0
+"692
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+{
+[s S1260 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.1S1260  1 a 1 wreg ]
+"697
+[v vfpfcnvrt@llu llu `uo  1 a 8 58 ]
+"694
+[v vfpfcnvrt@c c `uc  1 a 1 66 ]
+"692
+[v vfpfcnvrt@fp fp `*.1S1260  1 a 1 wreg ]
+[v vfpfcnvrt@fmt fmt `*.4*.25uc  1 p 1 51 ]
+[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 52 ]
+"702
+"692
+[v vfpfcnvrt@fp fp `*.1S1260  1 a 1 67 ]
+"1387
+} 0
+"645
+[v _xtoa xtoa `(i  1 s 2 xtoa ]
+{
+[s S1260 _IO_FILE 0 ]
+[v xtoa@fp fp `*.1S1260  1 a 1 wreg ]
+"648
+[v xtoa@n n `uo  1 a 8 39 ]
+"647
+[v xtoa@c c `i  1 a 2 49 ]
+[v xtoa@i i `i  1 a 2 47 ]
+[v xtoa@w w `i  1 a 2 37 ]
+[v xtoa@p p `i  1 a 2 34 ]
+"645
+[v xtoa@fp fp `*.1S1260  1 a 1 wreg ]
+[v xtoa@d d `uo  1 p 8 13 ]
+[v xtoa@x x `uc  1 p 1 21 ]
+"651
+"645
+[v xtoa@fp fp `*.1S1260  1 a 1 36 ]
+"687
+} 0
+"4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/toupper.c
+[v _toupper toupper `(i  1 e 2 0 ]
+{
+[v toupper@c c `i  1 p 2 6 ]
+"8
+} 0
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/islower.c
+[v _islower islower `(i  1 e 2 0 ]
+{
+[v islower@c c `i  1 p 2 0 ]
+"8
+} 0
+"72 /opt/microchip/xc8/v2.31/pic/sources/c99/common/doprnt.c
+[v _pad pad `(i  1 s 2 pad ]
+{
+[s S1260 _IO_FILE 0 ]
+[v pad@fp fp `*.1S1260  1 a 1 wreg ]
+"74
+[v pad@w w `i  1 a 2 10 ]
+[v pad@i i `i  1 a 2 8 ]
+"72
+[v pad@fp fp `*.1S1260  1 a 1 wreg ]
+[v pad@buf buf `*.5uc  1 p 1 4 ]
+[v pad@p p `i  1 p 2 5 ]
+"77
+"72
+[v pad@fp fp `*.1S1260  1 a 1 12 ]
+"95
+} 0
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+[v strlen@s s `*.5DCuc  1 a 1 wreg ]
+"7
+[v strlen@a a `*.5DCuc  1 a 1 3 ]
+"5
+[v strlen@s s `*.5DCuc  1 a 1 wreg ]
+"7
+[v strlen@s s `*.5DCuc  1 a 1 4 ]
+"12
+} 0
+"8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+[v fputs@s s `*.5DCuc  1 a 1 wreg ]
+"11
+[v fputs@i i `i  1 a 2 1 ]
+"10
+[v fputs@c c `uc  1 a 1 0 ]
+"8
+[v fputs@s s `*.5DCuc  1 a 1 wreg ]
+[s S1243 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputs@fp fp `*.1S1243  1 p 1 10 ]
+"13
+[v fputs@s s `*.5DCuc  1 a 1 3 ]
+"19
+} 0
+"8 /opt/microchip/xc8/v2.31/pic/sources/c99/common/nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 2 ]
+[s S1243 _IO_FILE 5 `*.1uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputc@fp fp `*.1S1243  1 p 1 4 ]
+"24
+} 0
+"146 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/eusart.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@txData txData `uc  1 a 1 wreg ]
+[v putch@txData txData `uc  1 a 1 wreg ]
+"148
+[v putch@txData txData `uc  1 a 1 1 ]
+"149
+} 0
+"132
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 0 ]
+"139
+} 0
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/isupper.c
+[v _isupper isupper `(i  1 e 2 0 ]
+{
+[v isupper@c c `i  1 p 2 0 ]
+"8
+} 0
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/isalpha.c
+[v _isalpha isalpha `(i  1 e 2 0 ]
+{
+[v isalpha@c c `i  1 p 2 0 ]
+"8
+} 0
+"141 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/eusart.c
+[v _getch getch `(uc  1 e 1 0 ]
+{
+"144
+} 0
+"113
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+{
+"130
+} 0
+"80 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/main.c
+[v _get_hex get_hex `(uc  1 e 1 0 ]
+{
+[v get_hex@letter letter `uc  1 a 1 wreg ]
+[v get_hex@letter letter `uc  1 a 1 wreg ]
+[v get_hex@letter letter `uc  1 a 1 2 ]
+"141
+} 0
+"143
+[v _create_hex create_hex `(uc  1 e 1 0 ]
+{
+[v create_hex@c c `i  1 p 2 0 ]
+"189
+} 0
+"73 /home/ryan/Nextcloud/Programming/PIC16F18877/libs/eeprom.c
+[v _byte_write byte_write `(v  1 e 1 0 ]
+{
+[v byte_write@addr1 addr1 `uc  1 a 1 wreg ]
+[v byte_write@addr1 addr1 `uc  1 a 1 wreg ]
+[v byte_write@addr2 addr2 `uc  1 p 1 1 ]
+[v byte_write@data data `uc  1 p 1 2 ]
+"75
+[v byte_write@addr1 addr1 `uc  1 a 1 4 ]
+"83
+} 0
+"87 /home/ryan/Nextcloud/Programming/PIC16F18877/libs/i2c_drivers.c
+[v _I2C_Write I2C_Write `(v  1 e 1 0 ]
+{
+[v I2C_Write@I2C_data I2C_data `uc  1 a 1 wreg ]
+[v I2C_Write@I2C_data I2C_data `uc  1 a 1 wreg ]
+"89
+[v I2C_Write@I2C_data I2C_data `uc  1 a 1 0 ]
+"95
+} 0
+"56
+[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
+{
+"63
+} 0
+"41
+[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
+{
+"48
+} 0
+"156
+[v _I2C_Idle_Check I2C_Idle_Check `(v  1 s 1 I2C_Idle_Check ]
+{
+"160
+} 0
+"4 /opt/microchip/xc8/v2.31/pic/sources/c99/common/atoi.c
+[v _atoi atoi `(i  1 e 2 0 ]
+{
+[v atoi@s s `*.4DCuc  1 a 1 wreg ]
+"6
+[v atoi@n n `i  1 a 2 7 ]
+[v atoi@neg neg `i  1 a 2 0 ]
+"4
+[v atoi@s s `*.4DCuc  1 a 1 wreg ]
+"6
+[v atoi@s s `*.4DCuc  1 a 1 9 ]
+"16
+} 0
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/isspace.c
+[v _isspace isspace `(i  1 e 2 0 ]
+{
+[v isspace@c c `i  1 p 2 0 ]
+"8
+} 0
+"5 /opt/microchip/xc8/v2.31/pic/sources/c99/common/isdigit.c
+[v _isdigit isdigit `(i  1 e 2 0 ]
+{
+[v isdigit@c c `i  1 p 2 0 ]
+"8
+} 0
+"15 /opt/microchip/xc8/v2.31/pic/sources/c99/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"50 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"56
+} 0
+"72
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"86
+} 0
+"55 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"137
+} 0
+"58 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"66 /home/ryan/Nextcloud/Programming/EEPROM Project/eeprom_reader.X/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"170
+[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"172
+} 0
+"166
+[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"168
+} 0
+"174
+[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"176
+} 0
+"19 /home/ryan/Nextcloud/Programming/PIC16F18877/libs/i2c_drivers.c
+[v _I2C_Init I2C_Init `(v  1 e 1 0 ]
+{
+"32
+} 0
